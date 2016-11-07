@@ -55,11 +55,9 @@ class GSheet
   end
 
   def loopList
-    puts 'First, Last, Email, BTC Address:'
     puts 'No data found.' if @sheet.values.empty?
     @sheet.values.each do |row|
       break unless row[0]
-      #puts "#{row[0]}, #{row[1]}, #{row[4]}, #{row[5]}"
       yield row
     end
   end
