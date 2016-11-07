@@ -10,6 +10,6 @@ listid = ENV["MAILCHIMP_LIST_ID"]
 
 mailchimp = Mailchimp.connect
 
-email = 'robertascarlett@gmail.com'
+email = 'example@example.com'
 member = mailchimp.lists(listid).members(email)
 member.update status: 'subscribed'
